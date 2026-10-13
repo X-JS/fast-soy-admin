@@ -1,0 +1,10 @@
+# Local dev only: publish the dependency ports so a host-run backend
+# (`just run`) can reach them at localhost. The base compose keeps
+# postgres/redis internal for full-docker mode.
+services:
+  redis:
+    ports:
+      - "6379:6379"
+  postgres:
+    ports:
+      - "5432:5432"

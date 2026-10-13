@@ -89,3 +89,5 @@ app_system_e2e.sqlite3*
 tmp/
 codegen_backups/
 skills-lock.json
+graphify-out/
+.opencode/
