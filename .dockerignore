@@ -46,3 +46,7 @@ Dockerfile
 .env.*.local
 !.env.docker
 tests/
+
+# AI
+.opencode
+graphify-out
