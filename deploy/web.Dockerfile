@@ -1,5 +1,5 @@
 # Stage 1: install dependencies (cached unless lockfile changes)
-FROM node:lts-slim AS deps
+FROM node:22-slim AS deps
 WORKDIR /build/web
 RUN corepack enable && corepack prepare pnpm@latest --activate
 COPY web/.npmrc web/package.json web/pnpm-lock.yaml web/pnpm-workspace.yaml* ./
