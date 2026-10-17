@@ -1,3 +1,27 @@
+# 配置端口
+server:
+  port: 9000
+  servlet:
+    context-path: /         # 访问path
+  tomcat:
+    uri-encoding: UTF-8     # 默认编码格式
+    max-threads: 1000       # 最大线程数量 默认200
+    min-spare-threads: 30   # 初始化启动线程数量
+
 spring:
   application:
     name: admin
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://127.0.0.1:5432/fastsoyadmin
+    username: fastsoyadmin
+    password: fastsoyadmin
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #开发打印SQL，生产关闭
+  global-config:
+    db-config:
+      id-type: auto
+  mapper-locations: classpath:mapper/**/*.xml
