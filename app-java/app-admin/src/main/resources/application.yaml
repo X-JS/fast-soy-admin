@@ -25,3 +25,10 @@ mybatis-plus:
     db-config:
       id-type: auto
   mapper-locations: classpath:mapper/**/*.xml
+
+# JWT 配置
+app:
+  jwt:
+    secret: fastsoy-admin-jwt-secret-key-must-be-at-least-256-bits-for-hs256
+    access-expire-minutes: 30
+    refresh-expire-minutes: 720
